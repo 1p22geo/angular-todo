@@ -3,10 +3,7 @@ import { TodoAppComponent } from './pages/todo-app/todo-app.component';
 
 export const routes: Routes = [
   {
-    path: "todoApp",
+    path: '',
     component: TodoAppComponent
   },
-  {
-    path: "", redirectTo: "todoApp", pathMatch: "full"
-  }
-];
+]
