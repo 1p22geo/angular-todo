@@ -3,10 +3,14 @@ import { TodoAppComponent } from './pages/todo-app/todo-app.component';
 
 export const routes: Routes = [
   {
-    path: "todoApp",
+    path: "angular-todo/todoApp",
     component: TodoAppComponent
   },
   {
-    path: "", redirectTo: "todoApp", pathMatch: "full"
+    path: "", redirectTo: "/angular-todo/todoApp", pathMatch: "full"
+  },
+  {
+    path: "**", redirectTo: "/angular-todo/todoApp"
   }
+
 ];
