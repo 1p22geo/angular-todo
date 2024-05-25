@@ -31,13 +31,13 @@ export class AddTodoComponent {
     this.date.setValue('');
   }
   submitForm() {
-    if (!this.title.value) return
-    if (!this.date.value) return
+    if (!this.title.value) return;
+    if (!this.date.value) return;
     this.addTodo.emit({
       title: this.title.value,
       content: this.desc.value,
-      date: new Date(this.date.value)
-    })
-    this.clearForm()
+      date: new Date(this.date.value),
+    });
+    this.clearForm();
   }
 }
