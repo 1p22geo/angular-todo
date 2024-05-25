@@ -26,4 +26,11 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 })
 export class AppComponent {
   title = 'angular-todo';
+  favorite = false;
+  get icon_color() {
+    return this.favorite ? "accent" : undefined
+  }
+  toggleFavorite() {
+    this.favorite = !this.favorite
+  }
 }

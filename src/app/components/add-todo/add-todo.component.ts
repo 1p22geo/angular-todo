@@ -37,6 +37,7 @@ export class AddTodoComponent {
       title: this.title.value,
       content: this.desc.value,
       date: new Date(this.date.value),
+      favorite: false,
     });
     this.clearForm();
   }
