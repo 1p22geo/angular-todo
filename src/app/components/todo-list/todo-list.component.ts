@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Todo } from '../../lib/todo';
 import { AddTodoComponent } from '../add-todo/add-todo.component';
 import { MatListModule } from '@angular/material/list';
@@ -24,7 +24,11 @@ import {
   styleUrl: './todo-list.component.scss',
 })
 export class TodoListComponent {
+  @Input() onlyFavorites = false;
   todos: Todo[] = [];
+  get visibleTodos() {
+    return !this.onlyFavorites ? this.todos : this.todos.filter(x => x.favorite)
+  }
   addTodo(todo: Todo) {
     this.todos.push(todo);
   }

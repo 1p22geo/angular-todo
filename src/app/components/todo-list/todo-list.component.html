@@ -1,6 +1,6 @@
 <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
 <mat-list>
-  @for (todo of todos; track todo) {
+  @for (todo of visibleTodos; track todo) {
     <div class="item">
       <mat-list-item>
         <span matListItemTitle>{{ todo.title }}</span>
