@@ -12,9 +12,11 @@
         mat-icon-button
         aria-label="add to favorites"
       >
-        <mat-icon [color]="todo.favorite?'primary':undefined" >favorite</mat-icon>
+        <mat-icon [color]="todo.favorite ? 'primary' : undefined"
+          >favorite</mat-icon
+        >
       </button>
-    <button
+      <button
         (click)="deleteTodo(todo)"
         mat-icon-button
         aria-label="Delete todo item"

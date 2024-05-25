@@ -37,6 +37,6 @@ export class TodoListComponent {
   }
   toggleFavoriteTodo(todo: Todo) {
     const ix = this.todos.indexOf(todo);
-    if (ix >= 0) this.todos[ix].favorite = !this.todos[ix].favorite
+    if (ix >= 0) this.todos[ix].favorite = !this.todos[ix].favorite;
   }
 }

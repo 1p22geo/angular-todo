@@ -28,9 +28,9 @@ export class AppComponent {
   title = 'angular-todo';
   favorite = false;
   get icon_color() {
-    return this.favorite ? "accent" : undefined
+    return this.favorite ? 'accent' : undefined;
   }
   toggleFavorite() {
-    this.favorite = !this.favorite
+    this.favorite = !this.favorite;
   }
 }
