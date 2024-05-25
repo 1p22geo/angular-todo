@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  min-width: 120px;
+  max-width: 500px;
+  margin: 2rem;
+  width: 100vw;
+  .buttons {
+    width: fit-content;
+    margin-left: auto;
+  }
+  .sr-only {
+  }
+}
+

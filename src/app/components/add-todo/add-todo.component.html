@@ -1,0 +1,28 @@
+<form>
+  <mat-form-field class="form-full-width">
+    <mat-label>Title</mat-label>
+    <input
+      matInput
+      placeholder="Walk the dog"
+      id="title"
+      type="text"
+      [formControl]="title"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form-full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput [formControl]="desc"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="form-full-width">
+    <mat-label>Date</mat-label>
+    <input matInput type="date" [formControl]="date" [value]="date" required />
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-flat-button color="accent" (click)="clearForm()">Clear</button>
+    <button mat-flat-button color="primary" (click)="submitForm()">Add</button>
+  </div>
+</form>

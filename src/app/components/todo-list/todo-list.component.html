@@ -1,0 +1,14 @@
+<app-add-todo (addTodo)="addTodo($event)" ></app-add-todo>
+<mat-list>
+  @for(todo of todos; track todo){
+  <div class="item">
+  <mat-list-item>
+    <span matListItemTitle>{{todo.title}}</span>
+    <span matListItemLine>{{todo.content}}</span>
+    <span matListItemLine>{{dateSummary(todo.date)}}</span>
+  </mat-list-item>
+    <button (click)="deleteTodo(todo)" mat-icon-button aria-label="Delete todo item"><mat-icon color="warn">delete</mat-icon></button>
+  </div>
+
+  }
+</mat-list>
