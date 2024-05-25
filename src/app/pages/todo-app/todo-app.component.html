@@ -1,0 +1,19 @@
+<main>
+  <mat-toolbar>
+    <button mat-icon-button aria-label="Expandable nav">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>ToDo app</span>
+    <span class="spacer"></span>
+    <button
+      mat-icon-button
+      class="favorite-icon"
+      (click)="toggleFavorite()"
+      aria-label="Placeholder favorite icon"
+    >
+      <mat-icon [color]="icon_color">favorite</mat-icon>
+    </button>
+  </mat-toolbar>
+  <app-todo-list [onlyFavorites]="favorite"></app-todo-list>
+</main>
+
