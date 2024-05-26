@@ -1,8 +1,12 @@
 <main>
-  <mat-toolbar>
-    <button mat-icon-button aria-label="Expandable nav">
+  <mat-toolbar><button
+      mat-icon-button
+      aria-label="Expandable nav"
+      (click)="toggleExpand()"
+    >
       <mat-icon>menu</mat-icon>
     </button>
+
     <span>ToDo app</span>
     <span class="spacer"></span>
     <button
@@ -15,13 +19,13 @@
     </button>
   </mat-toolbar>
   <mat-sidenav-container>
-    <mat-sidenav mode="side" opened>
+    <mat-sidenav mode="side" [opened]="expanded">
       <mat-list role="list">
         <mat-list-item role="listitem"><a href=".">ToDo app</a></mat-list-item>
         <mat-list-item role="listitem"><a href="about">About</a></mat-list-item>
       </mat-list>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content class="main-content">
       <app-todo-list [onlyFavorites]="favorite"></app-todo-list>
     </mat-sidenav-content>
   </mat-sidenav-container>

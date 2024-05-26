@@ -12,7 +12,7 @@
   </mat-toolbar>
   <main>
     <mat-sidenav-container>
-      <mat-sidenav mode="side" opened>
+      <mat-sidenav mode="side" [opened]="expanded">
         <mat-list role="list">
           <mat-list-item role="listitem"
             ><a href="..">ToDo app</a></mat-list-item
@@ -22,7 +22,7 @@
           >
         </mat-list>
       </mat-sidenav>
-      <mat-sidenav-content>
+      <mat-sidenav-content class="main-content">
         <h1>This is a test page</h1>
         <h2>
           It has no practical utility, it was made when I was learning AngularJS

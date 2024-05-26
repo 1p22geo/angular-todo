@@ -42,6 +42,10 @@ import {
   styleUrl: './todo-app.component.scss',
 })
 export class TodoAppComponent {
+  expanded = false;
+  toggleExpand(){
+    this.expanded =!this.expanded;
+  }
   title = 'angular-todo';
   favorite = false;
   get icon_color() {
