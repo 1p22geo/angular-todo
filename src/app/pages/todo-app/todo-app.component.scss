@@ -1,8 +1,13 @@
 main {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
   .spacer {
     flex: 1 1 auto;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ddd;
   }
 }

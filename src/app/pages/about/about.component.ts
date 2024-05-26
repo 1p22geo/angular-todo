@@ -16,7 +16,7 @@ import {
 } from '@angular/material/card';
 
 @Component({
-  selector: 'app-todo-app',
+  selector: 'app-about',
   standalone: true,
   imports: [
     RouterOutlet,
@@ -38,16 +38,12 @@ import {
     MatCardContent,
     MatCard,
   ],
-  templateUrl: './todo-app.component.html',
-  styleUrl: './todo-app.component.scss',
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.scss',
 })
-export class TodoAppComponent {
-  title = 'angular-todo';
-  favorite = false;
-  get icon_color() {
-    return this.favorite ? 'accent' : undefined;
-  }
-  toggleFavorite() {
-    this.favorite = !this.favorite;
+export class AboutComponent {
+  expanded: boolean = false;
+  toggleExpand() {
+    this.expanded = !this.expanded;
   }
 }

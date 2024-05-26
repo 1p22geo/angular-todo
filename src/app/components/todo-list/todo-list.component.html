@@ -1,4 +1,9 @@
+<h1>Add more todos</h1>
 <app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
+<h1>Added items</h1>
+@if (visibleTodos.length == 0) {
+  <h2>None yet.</h2>
+}
 <mat-list>
   @for (todo of visibleTodos; track todo) {
     <div class="item">

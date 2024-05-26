@@ -27,7 +27,9 @@ export class TodoListComponent {
   @Input() onlyFavorites = false;
   todos: Todo[] = [];
   get visibleTodos() {
-    return !this.onlyFavorites ? this.todos : this.todos.filter(x => x.favorite)
+    return !this.onlyFavorites
+      ? this.todos
+      : this.todos.filter((x) => x.favorite);
   }
   addTodo(todo: Todo) {
     this.todos.push(todo);
